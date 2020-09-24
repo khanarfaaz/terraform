@@ -1,14 +1,14 @@
-resource "aws_instance" "myawsserver" {
+resource "aws_instance" "EPL" {
   ami = "ami-0603cbe34fd08cb81"
   instance_type = "t2.micro"
 
   tags = {
-    Name = "Techlanders-aws-ec2-instance"
-    Env = "Prod"
+    Name = "EPL"
+    Env = "Cloud"
   }
 }
 
-output "myawsserver-ip" {
+output "EPL-ip" {
   value = "${aws_instance.myawsserver.public_ip}"
 }
 
